@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growtopia Store</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f0326 0%, #1a0940 100%);
+            color: white;
+        }
+
+        .hero-pattern {
+            background: linear-gradient(to bottom, rgba(29, 9, 64, 0.9), rgba(15, 3, 38, 0.9));
+        }
+
+        .section-dark {
+            background: linear-gradient(to bottom, rgba(15, 3, 38, 0.95), rgba(29, 9, 64, 0.95));
+        }
+
+        .gt-card {
+            background: linear-gradient(135deg, #2d1163 0%, #4c1d95 100%);
+            border: 3px solid #7c3aed;
+            box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .gt-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(124, 58, 237, 0.7);
+        }
+
+        .gt-button {
+            background: linear-gradient(45deg, #f59e0b, #fbbf24);
+            border: 2px solid #fcd34d;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .gt-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.7);
+        }
+
+        .payment-card {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            border: 2px solid #4f46e5;
+            transition: all 0.3s ease;
+        }
+
+        .payment-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(79, 70, 229, 0.5);
+        }
+
+        .navbar {
+            background: rgba(15, 3, 38, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #7c3aed;
+        }
+
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Background Overlay -->
+    <div class="bg-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text bg-clip-text bg-gradient-to-r from-violet-400 to-amber-400">
+                    Alc Store 2025
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#products" class="text-white hover:text-amber-400 transition">Products</a>
+                    <a href="#payment" class="text-white hover:text-amber-400 transition">Payment</a>
+                    <a href="#contact" class="text-white hover:text-amber-400 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern min-h-screen flex items-center justify-center pt-0">
+        <div class="container mx-auto px-20 py-20 text-center">
+            <h1 class="text-6xl font-bold mb-2 text bg-clip-text bg-gradient-to-r from-violet-400 to-amber-400">
+                Alc Store
+            </h1>
+             <h1 class="text-2xl font-bold mb-8 text bg-clip-text bg-gradient-to-r from-violet-400 to-amber-200">
+             Affordable GTPS Essentials!
+            </h1>
+            <p class="text-2xl text-gray-300 mb-12">Your trusted shop for quality GTPS needs at the best prices. Shop smart, save big at Alc Store!</p>
+            <div class="flex gap-4 justify-center">
+                <a href="#products" class="gt-button text-white px-8 py-4 rounded-lg text-xl">
+                    Products
+                </a>
+                <a href="#payment" class="gt-button text-white px-8 py-4 rounded-lg text-xl">
+                    Payment
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-0 section-dark">
+        <div class="container mx-auto px-9">
+            <h2 class="text-4xl font-bold text-center mb-10 bg-clip-text bg-gradient-to-r from-violet-400 to-amber-400">
+                Our Products
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- GTPS Product -->
+                <div class="gt-card rounded-xl overflow-hidden">
+                    <img src="https://cdn.discordapp.com/attachments/964888968124575764/1323280976885055509/ubiweek.jpg?ex=6773f0f2&is=67729f72&hm=27819a79a9580230c50a4a71ff7f525bcb5a0297dd3267bbb4e4ff85eb898766&" alt="GTPS Ready UP" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-bold mb-4 text-amber-400">Ready UP GrowtopiaPS</h3>
+                        <p class="text-gray-300 mb-6">Complete your GTPS server with premium VPS and CPP.</p>
+                        <a href="#contact" class="gt-button block text-center py-3 rounded-lg text-xl font-bold">
+                            Buy Ready UP
+                        </a>
+                          <div class="text-1xl font-bold text-amber-400 mb-4">Start From IDR 75.000</div>
+                    </div>
+                </div>
+
+                <!-- CPP GrowMist -->
+                <div class="gt-card rounded-xl overflow-hidden">
+                    <img src="https://cdn.discordapp.com/attachments/964888968124575764/1323281493086175365/cpp.jpg?ex=6773f16d&is=67729fed&hm=75c8ab42897b1bed2d956b5e600ace4124c2e7a63721f2643df75671243328ae&" alt="CPP GrowMist" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-bold mb-4 text-amber-400">GrowMist CPP Project's</h3>
+                        <p class="text-gray-300 mb-6">Advanced CPP solution for your server has good and elegant features.</p>
+                        <a href="#contact" class="gt-button block text-center py-3 rounded-lg text-xl font-bold">
+                            Buy GrowMist CPP
+                        </a>
+                        <div class="text-1xl font-bold text-amber-400 mb-4">Start From IDR 40.000</div>
+                    </div>
+                </div>
+
+                <!-- Website Services -->
+                <div class="gt-card rounded-xl overflow-hidden">
+                    <img src="https://cdn.discordapp.com/attachments/964888968124575764/1323281705485733980/web.jpeg?ex=6773f19f&is=6772a01f&hm=c2fa8753be622b3b666cbe09916e1dd54a52a71f2871ec2c361e3ecf50c69906&" alt="Website Services" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-bold mb-4 text-amber-400">Website Services</h3>
+                        <p class="text-gray-300 mb-6">Custom Website Development with good design and quality domains that you can request.</p>
+                        <a href="#contact" class="gt-button block text-center py-3 rounded-lg text-xl font-bold">
+                            Buy Website Services
+                        </a>
+                        <div class="text-1xl font-bold text-amber-400 mb-4">Start From IDR 60.000</div>
+                    </div>
+                </div>
+
+                <!-- Coding Services -->
+                <div class="gt-card rounded-xl overflow-hidden">
+                    <img src="https://cdn.discordapp.com/attachments/964888968124575764/1323281925095428218/coding.webp?ex=6773f1d4&is=6772a054&hm=ffb9d92c8a11466b1cfe0ca32935ced33276cbfc0b855618678701b0046fbc1f&" alt="Coding Services" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-bold mb-4 text-amber-400">Coding Services</h3>
+                        <p class="text-gray-300 mb-6">Professional GTPS Coding Services with the best level of expertise and very fast work.</p>
+                        <a href="#contact" class="gt-button block text-center py-3 rounded-lg text-xl font-bold">
+                            Buy Coding Services
+                        </a>
+                        <div class="text 1xl font-bold text-amber-400 mb-4">Start From IDR 20.000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="payment" class="py-20 hero-pattern">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-5 bg-clip-text bg-gradient-to-r from-violet-400 to-amber-400">
+                Payment Methods
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-1xl mx-auto">
+                <div class="payment-card rounded-xl p-8 text-center">
+                    <img src="https://cdn.discordapp.com/attachments/964888968124575764/1323267679339024486/gopay.jpeg?ex=6773e48f&is=6772930f&hm=378178b10e278d75928b3d9df4342d7c5465b7c9ea0646b2854ff35b47f60b87&" alt="Gopay" class="mx-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-bold text-amber-400">Gopay</h3>
+                    <p class="text-gray-300 text-sm mt-2">Use qris if you not Premium</p>
+                </div>
+                <div class="payment-card rounded-xl p-8 text-center">
+                    <img src="https://cdn.discordapp.com/attachments/964888968124575764/1323269487528771614/ovo.jpeg?ex=6773e63e&is=677294be&hm=d388dcf47eeebcbf307f24311cadef63b14c0ad2a60e8df0129da9c1d2fd7f33&" alt="OVO" class="mx-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-bold text-amber-400">OVO</h3>
+                    <p class="text-gray-300 text-sm mt-2">Can't Transfer? Use Qris</p>
+                </div>
+                <div class="payment-card rounded-xl p-8 text-center">
+                    <img src="https://cdn.discordapp.com/attachments/964888968124575764/1323269487776239616/dana.jpeg?ex=6773e63f&is=677294bf&hm=9709198343b248c9d88c42abde0bd2b1ad39d336a535cc86d6fb5be243599937&" alt="Dana" class="mx-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-bold text-amber-400">Dana</h3>
+                    <p class="text-gray-300 text-sm mt-2">Doesn't Premium? use Qris</p>
+                </div>
+                <div class="payment-card rounded-xl p-8 text-center">
+                    <img src="https://cdn.discordapp.com/attachments/964888968124575764/1323270583827300413/qris.png?ex=6773e744&is=677295c4&hm=5e4c56c6f031b168791aeaf93f855c14f72ae7d14d6152e8eaecb6501aaabcc2&" alt="QRIS" class="mx-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-bold text-amber-400">QRIS</h3>
+                    <p class="text-gray-300 text-sm mt-2">Support All Payment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 section-dark">
+        <div class="container mx-auto px-20">
+            <h2 class="text-4xl font-bold text-center mb-1 bg-clip-text bg-gradient-to-r from-violet-400 to-amber-400">
+                Connect With Us
+            </h2>
+            <p class="text-gray-300 mt-1 text-center mb-16 bg-clip-text bg-gradient-to-r from-violet-400 to-amber-400">
+                If you want to know more about our products, click the Linktree below to connect with the owner on WhatsApp. </p>
+            <div class="flex flex-wrap justify-center gap-8 max-w-3xl mx-auto">
+                <a href="https://linktr.ee/alcstore2025" class="payment-card rounded-xl p-8 text-center">
+                    <img src="https://cdn.discordapp.com/attachments/964888968124575764/1323273224376811633/linktree.png?ex=6773e9b9&is=67729839&hm=0ba1dc0243a9d4f6fedb1e88c12f31726a49c86d53bb1a6b4ae239ba4ca39953&" alt="Linktree" class="mx-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-bold text-amber-400">Linktree</h3>
+                    <p class="text-gray-300 text-sm mt-2">linktr.ee/alcstore2025</p>
+                    </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
